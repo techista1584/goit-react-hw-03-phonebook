@@ -3,6 +3,9 @@ import Notiflix from 'notiflix';
 import ContactList from './ContactList/ContactList';
 import FormList from './FormList/FormList';
 import Layout from './Layout/Layout';
+import GlobalTitle from './Layout/Title';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 class App extends Component {
   state = {
@@ -26,7 +29,7 @@ class App extends Component {
     const { contacts } = this.state;
     const isContactExist = contacts.some(({ name }) => name === contact.name);
     if (isContactExist) {
-      Notiflix.Notify.Failure(`${contact.name} is already in contacts.`);
+      Notiflix.Notify.failure(`${contact.name} is already in contacts.`);
     } else {
       this.setState(({ contacts }) => ({
         contacts: [...contacts, contact],
@@ -47,7 +50,9 @@ class App extends Component {
     const { contacts } = this.state;
     return (
       <Layout>
+        <GlobalTitle title="Phonebook" />
         <FormList onSubmit={this.addContact} />
+        <GlobalTitle title="Contacts" />
         <ContactList contacts={contacts} onDelete={this.deleteContact} />
       </Layout>
     );

@@ -32,7 +32,7 @@ class FormList extends Component {
   
   validateContact = (name, number) => {
     if (!name.trim() || !number.trim()) {
-      Notiflix.Notify.Failure('Some field is empty.');
+      Notiflix.Notify.failure('Some field is empty.');
       return false;
     }
     return true;
@@ -55,6 +55,7 @@ class FormList extends Component {
           <Span>Name</Span>
           <Input
             type="text"
+            autoComplete='on'
             placeholder="Contact Name"
             name="name"
             value={name}
@@ -72,7 +73,7 @@ class FormList extends Component {
             name="number"
             value={number}
             onChange={this.handleChange('number')}
-            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            pattern="\+?\d{1,4}[-.\s]*\(?\d{1,3}\)?[-.\s]*\d{1,4}[-.\s]*\d{1,4}[-.\s]*\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />

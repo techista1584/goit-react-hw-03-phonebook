@@ -5,13 +5,17 @@ export const Form = styled.form`
   background-color:white;
   flex-direction: column;
   align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding:20px 10px;
 `;
 export const Label = styled.label`
   color: ${(p) => p.theme.colors.black};
+  box-sizing:border-box;
 `;
 export const Input = styled.input`
   width: 350px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   background: white;
   border: ${(p) => p.theme.border.none};
   outline: none;
@@ -38,13 +42,12 @@ export const Button = styled.button`
   align-items: center;
   text-align:center;
   font-weight:bold;
-  width:93%;
   gap: 10px;
-  color: ${(p) => p.theme.colors.grey};
-  padding: 10px;
+  color: ${(p) => p.theme.colors.white};
+  padding: 10px 5%;
   background: pink;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   :focus,
   :hover {
     background: ${(p) => p.theme.colors.pink}; 

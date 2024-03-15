@@ -21,7 +21,7 @@ export const Title = styled.h1`
   padding:5px;
   text-align: center;
   align-content:center;
-  margin: 15px;
+  margin: 10px;
   font-size: ${(p) => p.theme.fontSize.l};
   color: ${(p) => p.theme.colors.black};
 `;

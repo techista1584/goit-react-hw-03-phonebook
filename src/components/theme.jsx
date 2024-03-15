@@ -1,11 +1,10 @@
 export const theme = {
   colors: {
-    black: '#000000',
+    black: '#1A1110',
     white: '#ffff',
-    grey:'#fff',
+    grey:'#d3d3d3',
     orange: '#f28500',
     pink:'#FFC1CC',
-    orangered: 'rgb(255, 128, 0)',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
 
@@ -29,6 +28,8 @@ export const theme = {
   },
   boxShadow: {
     textShadow: '0 1px 1px rgba(236, 230, 230, 0.05)',
-    boxShadow:' inset 0 -5px 45px rgba(100, 100, 100, 0.2)',
+    boxShadow: ' inset 0 -5px 45px rgba(100, 100, 100, 0.2)',
   }
 };
+
+
