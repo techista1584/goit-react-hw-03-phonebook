@@ -20,4 +20,3 @@ gap: 80px;
 export const Paragraf = styled.p`
 color:black;
 `
-
