@@ -75,7 +75,7 @@ class App extends Component {
         <GlobalTitle title="Contacts" />
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
-          deleteContact={this.deleteContact}
+          onDelete={this.deleteContact}
           contacts={filteredContacts}
         />
       </Layout>
