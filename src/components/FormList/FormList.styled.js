@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Form = styled.form`
   display: flex;
-  background-color:white;
+  background-color:lightgrey;
   flex-direction: column;
   align-items: center;
   border: 2px solid #e0e0e0;
