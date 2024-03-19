@@ -44,12 +44,16 @@ class App extends Component {
   };
 
   deleteContact = (contactId) => {
-    this.setState((prevState) => ({
+  this.setState((prevState) => {
+    const contactName = prevState.contacts.find(contact => contact.id === contactId).name;
+    return {
       contacts: prevState.contacts.filter(
         (contact) => contact.id !== contactId
       ),
-    }));
-  };
+    };
+  }, () => Notiflix.Notify.success(`${contactName} has been successfully deleted.`));
+};
+
 
   filterContact = () => {
     const { contacts, filter } = this.state;
