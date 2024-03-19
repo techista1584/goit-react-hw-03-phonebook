@@ -6,8 +6,7 @@ display: flex;
 justify-content: space-between;
 flex-direction: column;
 align-items: stretch;
-border: 2px solid #e0e0e0;
-border-radius: 15px;
+border: none;
 padding: 20px 10px;
 `
 export const List = styled.li`
